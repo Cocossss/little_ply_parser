@@ -11,10 +11,10 @@ python parser.py Test/test#.txt
 
 where # - number of test
 
-Test/test1.txt -  expression test
+Tests/test1.txt -  expression test
 
-Test/test2.txt - instruction (while, if, return, assignment) test
+Tests/test2.txt - instruction (while, if, return, assignment) test
 
-Test/test3.txt - if-optimization test
+Tests/test3.txt - if-optimization test
 
 
