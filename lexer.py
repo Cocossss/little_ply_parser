@@ -93,17 +93,3 @@ def t_error(t):
 # Build the lexer
 lex.lex()
 
-# Test it out
-data = '1**2 /= 2**1 <= 4 > 4 = 7 IF while return else'
-f = open('test.txt', 'r')
-data = f.read()
-f.close()
-# Give the lexer some input
-lex.input(data)
-
-# Tokenize
-#print('res:')
-#while 1:
-#    tok = lex.token()
-#    if not tok: break      # No more input
-#    print(tok)
