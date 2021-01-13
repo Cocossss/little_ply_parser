@@ -1,0 +1,8 @@
+g1(){
+    a=2;
+    b=2;
+    c=5;
+    if --(--x==f(x)) then{x=100;}else{x=1;};
+    if a+b==c then{x=101;}else{x=11;};
+    if x/=x then{x=100;}else{x=1;};
+}
