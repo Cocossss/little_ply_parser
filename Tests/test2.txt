@@ -1,0 +1,17 @@
+func1(a, b, c){
+x=5+6;
+while x < 10 { x = a+b+1;
+               while x == a+b { x = 1**100; };
+             };
+}
+func2(){
+return --x==1;
+if x==y then {while 1 {};}else{};
+}
+func3(){
+if x == 3 then {x=f();}
+          else {if x == 2 then {x = q();}
+                          else {return 3;};
+                return 2;};
+return 100;
+}
