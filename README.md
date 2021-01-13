@@ -7,7 +7,7 @@ cd ply-3.10
 python setup.py install
 
 # Run commands (from root directory)
-python parser.py Test/test#.txt
+python parser.py Tests/test#.txt
 
 where # - number of test
 
