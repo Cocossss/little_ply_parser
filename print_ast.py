@@ -4,7 +4,7 @@ def print_ast(ast,f, rec=3):
         print('-' * rec, '[]')
         f.write('-' * rec + '[]\n')
 
-    if isinstance(ast[0], str):
+    elif isinstance(ast[0], str):
         if ast[0] == 'bin_op':
             print('-' * rec, 'bin_op:')
             f.write('-' * rec + 'bin_op:\n')
@@ -99,8 +99,8 @@ def print_ast(ast,f, rec=3):
                 print('-' * (rec + 3), 'expr:')
                 f.write('-' * (rec + 3)+ 'expr:'+'\n')
                 if isinstance(el[1], int) or isinstance(el[1], str):
-                    print('-' * (rec + 3), el[1])
-                    f.write('-' * (rec + 3)+ str(el[1])+'\n')
+                    print('-' * (rec + 6), el[1])
+                    f.write('-' * (rec + 6)+ str(el[1])+'\n')
                 else:
                     print_ast(el[1],f,rec + 6)
                 print('-' * (rec + 3), 'body:')
