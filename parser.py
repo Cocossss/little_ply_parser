@@ -414,9 +414,8 @@ def p_term8_func(p):
 
 
 def p_error(p):
-    print("Syntax error in input!")
-
-res = '' # i'm very sorry for this global var
+    print("Syntax error at:", p)
+    raise Exception("Syntax error!")
 
 
 
@@ -437,7 +436,10 @@ if __name__ == "__main__":
 
 
 
-    result = yacc.parse(data)
+    try:
+        result = yacc.parse(data)
+    except Exception:
+        exit()
 
 
     if result != None:
