@@ -9,8 +9,8 @@ return --x==1;
 if x==y then {while 1 {};}else{};
 }
 func3(){
-if x == 3 then {x=f();}
-          else {if x == 2 then {x = q();}
+if a == 3 then {a=f();}
+          else {if a == 2 then {a = q();}
                           else {return 3;};
                 return 2;};
 return 100;
