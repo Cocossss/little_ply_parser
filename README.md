@@ -7,7 +7,14 @@ cd ply-3.10
 python setup.py install
 
 # Run commands (from root directory)
-python parser.py test.txt
+python parser.py Test/test#.txt
 
-# Testing
-./run_tests.sh
+where # - number of test
+
+Test/test1.txt -  expression test
+
+Test/test2.txt - instruction (while, if, return, assignment) test
+
+Test/test3.txt - if-optimization test
+
+
