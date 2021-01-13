@@ -6,8 +6,8 @@ cd ply-3.10
 
 python setup.py install
 
-# Run commands
-parser.py test.txt
+# Run commands (from root directory)
+python parser.py test.txt
 
 # Testing
 ./run_tests.sh
