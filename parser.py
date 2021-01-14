@@ -60,7 +60,8 @@ def p_instruction(p):
     '''instruction : assi
                     | return
                     | while
-                    | if'''
+                    | if
+                    | call_func'''
     p[0] = p[1]
 
 def p_assi(p):
@@ -402,16 +403,17 @@ def p_term6(p):
 
 def p_term8_num(p):
     '''term8 : NUMBER
-            | ID'''
+            | ID
+            | call_func'''
     p[0] = p[1] #str(p[1])
 
 def p_term8_expr(p):
     '''term8 : LPAREN expr RPAREN'''
     p[0] = p[2] #str(p[2])
 
-def p_term8_func(p):
-    '''term8 : ID LPAREN args RPAREN'''
-    p[0] = ['call_func', p[1], p[3]] #str(p[1]) + '(' + str(p[3]) + ')'
+def p_call_func(p):
+    '''call_func : ID LPAREN args RPAREN'''
+    p[0] = ['call_func', p[1], p[3]] 
 
 
 def p_error(p):
