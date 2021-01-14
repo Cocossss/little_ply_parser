@@ -21,6 +21,7 @@ def p_functions(p):
 def p_function(p):
     '''function : ID LPAREN args RPAREN LBR instructions RBR'''
     p[0] = ['func', p[1], p[3], p[6]]
+    assis.clear()
 
 def p_args(p):
     '''args : expr
@@ -346,8 +347,8 @@ def p_term5(p):
         p[0] = p[1] #str(p[1])
 
 def p_term6(p):
-    '''term6 : term7 POW term6
-            | term7'''
+    '''term6 : term8 POW term6
+            | term8'''
     if len(p) == 4:
         val = None
         left = None
@@ -380,24 +381,24 @@ def p_term6(p):
     else:
         p[0] = p[1] #str(p[1])
 
-def p_term7(p):
-    '''term7 : MINUS term7
-            | term8'''
-    if len(p) == 3:
-        val = None
-        if isinstance(p[2], list):
-            if p[2][0] == 'bin_op':
-                val = -(p[2][4])
-            elif p[2][0] == 'un_op':
-                val = -(p[2][3])
-        elif isinstance(p[2], int):
-            val = -p[2]
-        elif isinstance(p[2], str):
-            if p[2] in assis:
-                val = assis[p[2]]
-        p[0] = ['un_op', 'MINUS', p[2], val] #'(' + str(p[1]) + str(p[2]) + ')'
-    else:
-        p[0] = p[1] #str(p[1])
+#def p_term7(p):
+#    '''term7 : MINUS term7
+#            | term8'''
+#    if len(p) == 3:
+#        val = None
+#        if isinstance(p[2], list):
+#            if p[2][0] == 'bin_op':
+#                val = -(p[2][4])
+#            elif p[2][0] == 'un_op':
+#                val = -(p[2][3])
+#        elif isinstance(p[2], int):
+#            val = -p[2]
+#        elif isinstance(p[2], str):
+#            if p[2] in assis:
+#                val = assis[p[2]]
+#        p[0] = ['un_op', 'MINUS', p[2], val] #'(' + str(p[1]) + str(p[2]) + ')'
+#    else:
+#        p[0] = p[1] #str(p[1])
 
 def p_term8_num(p):
     '''term8 : NUMBER
