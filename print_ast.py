@@ -106,3 +106,10 @@ def print_ast(ast,f, rec=3):
                 print('-' * (rec + 3), 'body:')
                 f.write('-' * (rec + 3)+ 'body:'+'\n')
                 print_ast(el[2],f,rec + 6)
+            elif el[0] == 'call_func':
+                print('-' * rec, 'call_func:')
+                f.write('-' * rec+ 'call_func:'+'\n')
+                print('-' * (rec + 3), 'id:', el[1])
+                f.write('-' * (rec + 3)+ 'id:'+ str(el[1])+'\n')
+                print('-' * (rec + 3), 'args:', el[2])
+                f.write('-' * (rec + 3)+ 'args:'+ str(el[2])+'\n')
